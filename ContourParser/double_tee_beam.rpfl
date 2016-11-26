@@ -1,0 +1,19 @@
+-- A double tee or double-T beam is a load-bearing structure that resembles two T-beams connected to each other side by side.
+-- https://en.wikipedia.org/wiki/Double_tee
+-- look at Double Tee - Simple for params (http://www.pgsuper.com/content/what-pgsuper)
+contour_params=
+{
+	W = {name="W", type="metric", value=1000},
+	D1 = {name="D1", type="metric", value=100},
+	D2 = {name="D2", type="metric", value=800},
+	T1 = {name="T1", type="metric", value=200},
+	T2 = {name="T2", type="metric", value=100},
+	WI = {name="WI", type="metric", value=200}
+}
+
+
+
+
+
+
+
