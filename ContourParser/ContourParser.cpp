@@ -158,7 +158,7 @@ typedef std::list<Point> PointArray;
 Point readPoint(lua_State *L)
 {
 	Point result;
-	if(getfield(L, 1, result.x) == false || getfield(L, 2, result.y))
+	if(getfield(L, 1, result.x) == false || getfield(L, 2, result.y) == false)
 		throw "point reading error";
 	return result;
 }
@@ -181,9 +181,9 @@ public:
 PointArray readPointArray(lua_State *L)
 {
 	PointArray result;
-	
+	int top = lua_gettop(L);
 	lua_pushnil(L);  /* first key */
-	while (lua_next(L, 1) != 0) {
+	while (lua_next(L, top) != 0) {
 		/* uses 'key' (at index -2) and 'value' (at index -1) */
 		result.push_back(readPoint(L));
 		/* removes 'value'; keeps 'key' for next iteration */
@@ -199,7 +199,7 @@ std::shared_ptr<Polygon> readPolygon(lua_State *L)
 	lua_pushstring(L, "points");
 	lua_gettable(L, -2);  /* get background[key] */
 	
-	
+	result->m_points = readPointArray(L);
 
 	lua_pop(L, 1);  /* remove number */
 
@@ -227,13 +227,20 @@ public:
 	IGeometryItemPtrArray m_items;
 };
 
+void showProfile(const Profile& profile)
+{
+
+}
+
 Profile readProfile(lua_State *L)
 {
 	Profile result;
 	lua_getglobal(L, "profile_geometry");
-
-	lua_pushnil(L);  /* first key */
-	while (lua_next(L, 1) != 0) {
+  
+  int top = lua_gettop(L);
+	
+  lua_pushnil(L);  /* first key */
+	while (lua_next(L, top) != 0) {
 		/* uses 'key' (at index -2) and 'value' (at index -1) */
 		result.m_items.push_back(readGeometryItem(L));
 		/* removes 'value'; keeps 'key' for next iteration */
@@ -261,7 +268,7 @@ int main (void) {
 	{
 		stackDump(L);
 
-		auto params = readParams(L);
+		//auto params = readParams(L);
 		//showParams(params);
 
 		stackDump(L);
