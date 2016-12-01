@@ -82,7 +82,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Common.cpp" />
     <ClCompile Include="ContourParser.cpp" />
+    <ClCompile Include="ParameterDesc.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="PolygonDesc.cpp" />
+    <ClCompile Include="ProfileDesc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="IGeometryItem.h" />
+    <ClInclude Include="ParameterDesc.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="PolygonDesc.h" />
+    <ClInclude Include="ProfileDesc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
