@@ -20,9 +20,6 @@ int main (void) {
     if (0 != lua_pcall(L, 0, 0, 0))
       throw "Cannot run file!\n";
 
-    auto params = readParams(L);
-    showParams(params);
-
     auto profile = readProfile(L);
     outputProfile(profile, std::cout);
 	}

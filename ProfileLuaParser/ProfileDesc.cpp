@@ -17,9 +17,9 @@ IGeometryItemPtr readGeometryItem(lua_State *L)
   }
 }
 
-Profile readProfile(lua_State *L)
+IGeometryItemPtrArray readGeometryItems(lua_State *L)
 {
-  Profile result;
+  IGeometryItemPtrArray result;
   lua_getglobal(L, "profile_geometry");
 
   int top = lua_gettop(L);
@@ -27,12 +27,20 @@ Profile readProfile(lua_State *L)
   lua_pushnil(L);  /* first key */
   while (lua_next(L, top) != 0) {
     /* uses 'key' (at index -2) and 'value' (at index -1) */
-    result.m_items.push_back(readGeometryItem(L));
+    result.push_back(readGeometryItem(L));
     /* removes 'value'; keeps 'key' for next iteration */
     lua_pop(L, 1);
   }
 
   lua_pop(L, 1);
 
+  return result;
+}
+
+Profile readProfile(lua_State *L)
+{
+  Profile result;
+  result.m_params = readParams(L);
+  result.m_items = readGeometryItems(L);
   return result;
 }

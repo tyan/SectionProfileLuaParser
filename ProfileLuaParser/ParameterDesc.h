@@ -18,4 +18,3 @@ struct Param
 typedef std::map<std::string, Param> ParamsMap;
 
 ParamsMap readParams(lua_State *L);
-void showParams(const ParamsMap& params);

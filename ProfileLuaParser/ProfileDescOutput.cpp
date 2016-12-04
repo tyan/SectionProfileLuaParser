@@ -52,7 +52,7 @@ void outputPolygon(const Polygon& polygon, std::ostream& os)
 void outputGeometryItems(const IGeometryItemPtrArray& items, std::ostream& os)
 {
   Indent ind;
-  os << Indent::get() << "Profile geometry:" << std::endl;
+  os << Indent::get() << "Geometry:" << std::endl;
 
   for(auto pGeometryItem : items)
   {
@@ -61,8 +61,25 @@ void outputGeometryItems(const IGeometryItemPtrArray& items, std::ostream& os)
   }
 }
 
+void outputParams(const ParamsMap& params, std::ostream& os)
+{
+  Indent ind1;
+  os << Indent::get() << "Params:" << std::endl;
+  for(auto param : params)
+  {
+    Indent ind2;
+    os << Indent::get();
+    os << "Name: "<< param.first;
+    os << ", Title: "<< param.second.name;
+    os << ", Type: "<< param.second.type;
+    os << ", Value: "<< param.second.defaultValue;
+    os << std::endl;
+  }
+}
+
 void outputProfile(const Profile& profile, std::ostream& os)
 {
   os << Indent::get() << "Profile description:" << std::endl;
+  outputParams(profile.m_params, os);
   outputGeometryItems(profile.m_items, os);
 }

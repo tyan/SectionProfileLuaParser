@@ -1,4 +1,5 @@
 #pragma once
+#include "ParameterDesc.h"
 #include "IGeometryItem.h"
 
 struct lua_State;
@@ -6,6 +7,7 @@ struct lua_State;
 class Profile
 {
 public:
+  ParamsMap m_params;
   IGeometryItemPtrArray m_items;
 };
 

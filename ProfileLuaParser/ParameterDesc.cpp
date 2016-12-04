@@ -49,14 +49,3 @@ ParamsMap readParams(lua_State *L)
 
   return result;
 }
-
-void showParams(const ParamsMap& params)
-{
-  for(auto param : params)
-  {
-    std::cout << param.first << "\n";
-    std::cout << param.second.name << "\n";
-    std::cout << param.second.type << "\n";
-    std::cout << param.second.defaultValue << "\n";
-  }
-}
