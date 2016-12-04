@@ -65,3 +65,11 @@ bool getfield(lua_State *L, const char *key, std::string& value)
   lua_pop(L, 1);  /* remove number */
   return true;
 }
+
+/* assume that table is at the top */
+void setfield (lua_State *L, const char *key, double value) 
+{
+  lua_pushstring(L, key);
+  lua_pushnumber(L, value);
+  lua_settable(L, -3);
+}

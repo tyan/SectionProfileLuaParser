@@ -12,3 +12,4 @@ public:
 };
 
 Profile readProfile(lua_State *L);
+void updateProfileParams(const Profile& profile, lua_State *L);

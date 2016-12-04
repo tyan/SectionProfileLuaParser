@@ -49,3 +49,32 @@ ParamsMap readParams(lua_State *L)
 
   return result;
 }
+
+// params table should be on the top of the stack
+void writeParamValue(const std::string& paramName, double value, lua_State *L)
+{
+  lua_pushstring(L, paramName.c_str());
+  lua_gettable(L, -2);  /* get background[key] */
+
+  setfield(L, "value", value);
+  double tmp = 0;
+  getfield(L, "value", tmp);
+
+  lua_pop(L, 1);  /* remove number */
+}
+
+void writeParams(const ParamsMap& params, lua_State *L)
+{
+  ParamsMap result;
+  lua_getglobal(L, "params");
+
+  // writing new params
+  for (auto param : params)
+  {
+    auto paramName = param.first;
+    auto paramDesc = param.second;
+    writeParamValue(paramName, paramDesc.defaultValue, L);
+  }
+
+  lua_pop(L, 1);
+}

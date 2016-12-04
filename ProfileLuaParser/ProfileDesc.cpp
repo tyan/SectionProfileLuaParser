@@ -44,3 +44,8 @@ Profile readProfile(lua_State *L)
   result.m_items = readGeometryItems(L);
   return result;
 }
+
+void updateProfileParams(const Profile& profile, lua_State *L)
+{
+  writeParams(profile.m_params, L);
+}
