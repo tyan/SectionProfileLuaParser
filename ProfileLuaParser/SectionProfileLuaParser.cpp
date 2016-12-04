@@ -12,22 +12,18 @@ int main (void) {
 	lua_State *L= luaL_newstate();   /* opens Lua */
 	luaL_openlibs(L);             /* opens the basic library */
 
-	if (0 != luaL_loadfile(L, "double_tee_beam.rpfl"))
-		std::cout << "Cannot find file!\n";
+  try
+  {
+    if (0 != luaL_loadfile(L, "double_tee_beam.rpfl"))
+      throw "Cannot find file!\n";
 
-	if (0 != lua_pcall(L, 0, 0, 0))
-		std::cout << "Cannot run file!\n";
+    if (0 != lua_pcall(L, 0, 0, 0))
+      throw "Cannot run file!\n";
 
-	try
-	{
-		stackDump(L);
+    auto params = readParams(L);
+    showParams(params);
 
-		auto params = readParams(L);
-		showParams(params);
-
-		stackDump(L);
-
-		auto profile = readProfile(L);
+    auto profile = readProfile(L);
     outputProfile(profile, std::cout);
 	}
 	catch(const char* msg)
