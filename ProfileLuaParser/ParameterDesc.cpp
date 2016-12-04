@@ -35,7 +35,7 @@ Param readParam(lua_State *L)
 ParamsMap readParams(lua_State *L)
 {
   ParamsMap result;
-  lua_getglobal(L, "profile_params");
+  lua_getglobal(L, "params");
 
   lua_pushnil(L);  /* first key */
   while (lua_next(L, 1) != 0) {

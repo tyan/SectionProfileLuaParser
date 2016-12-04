@@ -20,7 +20,7 @@ IGeometryItemPtr readGeometryItem(lua_State *L)
 IGeometryItemPtrArray readGeometryItems(lua_State *L)
 {
   IGeometryItemPtrArray result;
-  lua_getglobal(L, "profile_geometry");
+  lua_getglobal(L, "geometry");
 
   int top = lua_gettop(L);
 

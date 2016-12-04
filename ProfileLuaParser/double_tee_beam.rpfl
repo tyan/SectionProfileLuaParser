@@ -1,7 +1,7 @@
 -- A double tee or double-T beam is a load-bearing structure that resembles two T-beams connected to each other side by side.
 -- https://en.wikipedia.org/wiki/Double_tee
 -- look at Double Tee - Simple for params (http://www.pgsuper.com/content/what-pgsuper)
-profile_params =
+params =
 {
 	W = {name="W", type="metric", value=1000},
 	D1 = {name="D1", type="metric", value=100},
@@ -11,14 +11,46 @@ profile_params =
 	WI = {name="WI", type="metric", value=200}
 }
 
-profile_geometry = 
+-- common values
+W = params.W.value
+H = params.D1.value + params.D2.value
+
+-- shelf coordinates
+ShelfTop = H / 2
+ShelfBottom = H / 2 - params.D1.value
+ShalfRight = W/2
+ShelfLeft = - ShalfRight
+
+-- legs coordinates in local LCS
+WidthBetweenLegs = params.WI.value
+LegTopWidth = params.T1.value
+LegBottomWidth = params.T2.value
+
+LegHeight = params.D2.value
+LegBottom = - H / 2
+LegTop = LegBottom + LegHeight
+
+-- right leg coordinates
+RightLegCenter = WidthBetweenLegs / 2 + LegTopWidth / 2
+RightLegTopLeft = RightLegCenter - LegTopWidth / 2
+RightLegTopRight = RightLegCenter + LegTopWidth / 2
+RightLegBottomLeft = RightLegCenter - LegBottomWidth / 2
+RightLegBottomRight = RightLegCenter + LegBottomWidth / 2
+
+-- left leg coordinates (symmetrical to the right one)
+LeftLegTopLeft = - RightLegTopRight
+LeftLegTopRight = - RightLegTopLeft
+LeftLegBottomLeft = - RightLegBottomRight
+LeftLegBottomRight = -RightLegBottomLeft
+
+geometry = 
 {
 	{
 	type = "polygon", 
-	points = {{-500, 300}, {-500, 200}, {-300, 200}, 
-			  {-250, -300}, {-150, -300}, {-100, 200}, 
-			  {100, 200}, {150, -300}, {250, -300},
-			  {300, 200}, {500, 200}, {500, 300}}
+	points = {{ShelfLeft, ShelfTop}, {ShelfLeft, ShelfBottom}, 
+			  {LeftLegTopLeft, LegTop}, {LeftLegBottomLeft, LegBottom}, {LeftLegBottomRight, LegBottom}, {LeftLegTopRight, LegTop}, 
+			  {RightLegTopLeft, LegTop}, {RightLegBottomLeft, LegBottom}, {RightLegBottomRight, LegBottom}, {RightLegTopRight, LegTop}, 
+			  {ShalfRight, ShelfBottom}, {ShalfRight, ShelfTop}}
 	}
 }
 
