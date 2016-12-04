@@ -1,7 +1,7 @@
 #include "Common.h"
 #include "ProfileDesc.h"
 #include "ParameterDesc.h"
-#include "PolygonDesc.h"
+#include "ProfileDescOutput.h"
 
 #include <stdio.h>
 #include <string>
@@ -9,8 +9,6 @@
 #include <iostream>
 
 int main (void) {
-	//char buff[256];
-	//int error;
 	lua_State *L= luaL_newstate();   /* opens Lua */
 	luaL_openlibs(L);             /* opens the basic library */
 
@@ -29,7 +27,8 @@ int main (void) {
 
 		stackDump(L);
 
-		auto geometry = readProfile(L);
+		auto profile = readProfile(L);
+    outputProfile(profile, std::cout);
 	}
 	catch(const char* msg)
 	{

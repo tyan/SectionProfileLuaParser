@@ -36,8 +36,3 @@ Profile readProfile(lua_State *L)
 
   return result;
 }
-
-void showProfile(const Profile& profile)
-{
-
-}

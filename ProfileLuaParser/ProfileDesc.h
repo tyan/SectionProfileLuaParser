@@ -10,4 +10,3 @@ public:
 };
 
 Profile readProfile(lua_State *L);
-void showProfile(const Profile& profile);

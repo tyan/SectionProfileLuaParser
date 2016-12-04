@@ -84,6 +84,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Common.cpp" />
+    <ClCompile Include="ProfileDescOutput.cpp" />
     <ClCompile Include="SectionProfileLuaParser.cpp" />
     <ClCompile Include="ParameterDesc.cpp" />
     <ClCompile Include="Point.cpp" />
@@ -97,6 +98,7 @@
     <ClInclude Include="Point.h" />
     <ClInclude Include="PolygonDesc.h" />
     <ClInclude Include="ProfileDesc.h" />
+    <ClInclude Include="ProfileDescOutput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
