@@ -11,6 +11,9 @@ params =
 	WI = {name="WI", type="metric", value=200}
 }
 
+-- Call this function to update profile params from Renga
+rengaUpdateParams()
+
 -- common values
 W = params.W.value
 H = params.D1.value + params.D2.value
