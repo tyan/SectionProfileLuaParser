@@ -16,9 +16,15 @@
     <ClCompile Include="source\RengaScript.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\ParametricProfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\RengaScript.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ParametricProfile.h">
       <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>

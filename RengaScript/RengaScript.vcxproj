@@ -20,9 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\dllmain.cpp" />
+    <ClCompile Include="source\ParametricProfile.cpp" />
     <ClCompile Include="source\RengaScript.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\ParametricProfile.h" />
     <ClInclude Include="include\RengaScript.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -100,7 +102,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>RENGA_SCRIPT_LIBRARY;WIN32;_DEBUG;_WINDOWS;_USRDLL;RENGASCRIPT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\lua-5.3.3\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\lua-5.3.3\src;.\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -116,7 +118,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>RENGA_SCRIPT_LIBRARY;WIN32;_DEBUG;_WINDOWS;_USRDLL;RENGASCRIPT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\lua-5.3.3\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\lua-5.3.3\src;.\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -134,7 +136,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>RENGA_SCRIPT_LIBRARY;WIN32;NDEBUG;_WINDOWS;_USRDLL;RENGASCRIPT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\lua-5.3.3\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\lua-5.3.3\src;.\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -154,7 +156,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>RENGA_SCRIPT_LIBRARY;WIN32;NDEBUG;_WINDOWS;_USRDLL;RENGASCRIPT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\lua-5.3.3\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\lua-5.3.3\src;.\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
