@@ -20,12 +20,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\dllmain.cpp" />
+    <ClCompile Include="source\GeometryItem.cpp" />
     <ClCompile Include="source\ParametricProfile.cpp" />
+    <ClCompile Include="source\Polygon2D.cpp" />
     <ClCompile Include="source\RengaScript.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\GeometryItem.h" />
     <ClInclude Include="include\ParametricProfile.h" />
+    <ClInclude Include="include\Point2D.h" />
+    <ClInclude Include="include\Polygon2D.h" />
     <ClInclude Include="include\RengaScript.h" />
+    <ClInclude Include="source\GeometryItemImpl.h" />
+    <ClInclude Include="source\Polygon2DImpl.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{820A99B6-B252-48B3-846F-A150FBDA5D6A}</ProjectGuid>

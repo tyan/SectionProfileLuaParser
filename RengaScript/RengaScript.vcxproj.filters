@@ -19,6 +19,12 @@
     <ClCompile Include="source\ParametricProfile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\Polygon2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GeometryItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\RengaScript.h">
@@ -26,6 +32,21 @@
     </ClInclude>
     <ClInclude Include="include\ParametricProfile.h">
       <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Point2D.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Polygon2D.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GeometryItem.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GeometryItemImpl.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Polygon2DImpl.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
