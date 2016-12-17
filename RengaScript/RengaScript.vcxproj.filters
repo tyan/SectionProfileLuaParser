@@ -25,6 +25,9 @@
     <ClCompile Include="source\GeometryItem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\ProfileParameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\RengaScript.h">
@@ -47,6 +50,9 @@
     </ClInclude>
     <ClInclude Include="source\Polygon2DImpl.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ProfileParameter.h">
+      <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

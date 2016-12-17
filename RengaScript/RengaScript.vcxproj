@@ -23,6 +23,7 @@
     <ClCompile Include="source\GeometryItem.cpp" />
     <ClCompile Include="source\ParametricProfile.cpp" />
     <ClCompile Include="source\Polygon2D.cpp" />
+    <ClCompile Include="source\ProfileParameter.cpp" />
     <ClCompile Include="source\RengaScript.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -30,6 +31,7 @@
     <ClInclude Include="include\ParametricProfile.h" />
     <ClInclude Include="include\Point2D.h" />
     <ClInclude Include="include\Polygon2D.h" />
+    <ClInclude Include="include\ProfileParameter.h" />
     <ClInclude Include="include\RengaScript.h" />
     <ClInclude Include="source\GeometryItemImpl.h" />
     <ClInclude Include="source\Polygon2DImpl.h" />

@@ -1,8 +1,7 @@
 #pragma once
 #include "RengaScript.h"
+#include "ProfileParameter.h"
 #include "GeometryItem.h"
-
-#include <string>
 
 namespace script
 {
@@ -12,8 +11,15 @@ namespace script
     ParametricProfile();
     virtual ~ParametricProfile();
 
+    // common logic
     bool updateFromScript(std::string profileScriptPath);
-    
+
+    // parameters
+    size_t parametersCount() const;
+    const ProfileParameter& parameter(size_t index) const;
+    bool updateParameterValue(const std::string name, double value);
+
+    // geometry
     size_t geometryItemsCount() const;
     const GeometryItem* geometryItem(size_t index) const;
 
