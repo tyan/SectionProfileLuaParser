@@ -8,7 +8,7 @@ namespace script
     class GeometryItemImpl
     {
     public:
-      virtual ~GeometryItemImpl() = 0;
+      virtual ~GeometryItemImpl(){};
       virtual GeometryItem::Type type() const = 0;
     };
   }

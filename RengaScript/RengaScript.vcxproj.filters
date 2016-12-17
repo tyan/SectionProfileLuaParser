@@ -28,6 +28,9 @@
     <ClCompile Include="source\ProfileParameter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\LoadFromLua.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\RengaScript.h">
@@ -53,6 +56,9 @@
     </ClInclude>
     <ClInclude Include="include\ProfileParameter.h">
       <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LoadFromLua.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

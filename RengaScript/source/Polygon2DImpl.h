@@ -1,6 +1,6 @@
 #pragma once
 #include "GeometryItemImpl.h"
-#include "Point2D.h"
+#include "Polygon2D.h"
 
 #include <vector>
 
@@ -11,7 +11,17 @@ namespace script
     class Polygon2DImpl : public GeometryItemImpl
     {
     public:
-      ~Polygon2DImpl();
+      static Polygon2D* createPolygon(const std::vector<Point2D>& points)
+      {
+        return new Polygon2D(new Polygon2DImpl(points));
+      }
+      
+      Polygon2DImpl(const std::vector<Point2D>& points)
+        : m_points(points)
+      {}
+
+      ~Polygon2DImpl()
+      {}
 
       // GeometryItemImpl
       GeometryItem::Type type() const

@@ -20,6 +20,17 @@ ProfileParameter::ProfileParameter(Type type, const std::string& name, const std
   m_pImpl->value = value;
 }
 
+ProfileParameter::ProfileParameter(const ProfileParameter& other)
+{
+  m_pImpl = new ProfileParameter::Impl(*other.m_pImpl);
+}
+
+ProfileParameter& script::ProfileParameter::operator=(const ProfileParameter& other)
+{
+  *m_pImpl = *other.m_pImpl;
+  return *this;
+}
+
 ProfileParameter::~ProfileParameter()
 {
   delete m_pImpl;

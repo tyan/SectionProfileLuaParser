@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="source\dllmain.cpp" />
     <ClCompile Include="source\GeometryItem.cpp" />
+    <ClCompile Include="source\LoadFromLua.cpp" />
     <ClCompile Include="source\ParametricProfile.cpp" />
     <ClCompile Include="source\Polygon2D.cpp" />
     <ClCompile Include="source\ProfileParameter.cpp" />
@@ -34,6 +35,7 @@
     <ClInclude Include="include\ProfileParameter.h" />
     <ClInclude Include="include\RengaScript.h" />
     <ClInclude Include="source\GeometryItemImpl.h" />
+    <ClInclude Include="source\LoadFromLua.h" />
     <ClInclude Include="source\Polygon2DImpl.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

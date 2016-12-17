@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProfileLuaParser", "ProfileLuaParser\ProfileLuaParser.vcxproj", "{A0276CB9-0061-4FF6-A292-0053779AA036}"
+	ProjectSection(ProjectDependencies) = postProject
+		{820A99B6-B252-48B3-846F-A150FBDA5D6A} = {820A99B6-B252-48B3-846F-A150FBDA5D6A}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RengaScript", "RengaScript\RengaScript.vcxproj", "{820A99B6-B252-48B3-846F-A150FBDA5D6A}"
 EndProject

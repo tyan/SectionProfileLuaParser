@@ -15,6 +15,8 @@ namespace script
       Angle_deg
     };
     ProfileParameter(Type type, const std::string& name, const std::string& userName, double value);
+    ProfileParameter(const ProfileParameter& other);
+    ProfileParameter& operator=(const ProfileParameter& other);
     ~ProfileParameter();
 
     Type type() const;
