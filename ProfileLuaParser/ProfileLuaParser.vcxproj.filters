@@ -11,48 +11,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Common.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ParameterDesc.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Point.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PolygonDesc.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProfileDesc.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SectionProfileLuaParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ProfileDescOutput.cpp">
+    <ClCompile Include="ParametricProfileOutput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Common.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IGeometryItem.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ParameterDesc.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ProfileDesc.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PolygonDesc.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Point.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ProfileDescOutput.h">
+    <ClInclude Include="ParametricProfileOutput.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
