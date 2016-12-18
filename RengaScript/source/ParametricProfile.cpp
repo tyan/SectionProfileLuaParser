@@ -31,7 +31,7 @@ public:
 
     try
     {
-      if (0 != luaL_loadfile(L, "double_tee_beam.rpfl"))
+      if (0 != luaL_loadfile(L, profileScriptPath.c_str()))
         throw "Cannot find file!\n";
 
       lua_pushcfunction(L, rengaUpdateParams);
