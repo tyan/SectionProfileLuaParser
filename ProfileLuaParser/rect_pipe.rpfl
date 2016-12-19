@@ -1,0 +1,39 @@
+-- A pipe with rectangle profile and hole
+
+params =
+{
+	W = {name="Width", type="metric", value=1000},
+	H = {name="Height", type="metric", value=1000},
+	T = {name="Thickness", type="metric", value=100}
+}
+
+-- Call this function to update profile params from Renga
+rengaUpdateParams()
+
+-- common values
+W = params.W.value
+H = params.H.value
+HoleW = W - 2 * params.T.value
+HoleH = H - 2 * params.T.value
+
+geometry = 
+{
+	{
+	type = "polygon", 
+	points = {{-W/2, -H/2}, {W/2, -H/2}, {W/2, H/2}, {-W/2, H/2}}
+	},
+	
+	{
+	type = "polygon", 
+	points = {{-HoleW/2, -HoleH/2}, {HoleW/2, -HoleH/2}, {HoleW/2, HoleH/2}, {-HoleW/2, HoleH/2}}
+	}
+}
+
+
+
+
+
+
+
+
+
